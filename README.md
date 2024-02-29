@@ -1,3 +1,8 @@
 This is a README
 
-mooiin
+Um das Projekt auszuführen:
+
+```
+npm install
+npm start
+```
