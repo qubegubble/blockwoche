@@ -1,15 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<energie-data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="database.xsd">
+<energie-data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="database.xsd">
     <energie-plant>
         <plant>
-            <name>Aarau</name>
-            <statistics>
-                <price date="2021-01-15">10.25</price>
-                <price date="2022-01-17">9.75</price>
-                <price date="2022-03-20">11.50</price>
-                <price date="2022-11-09">13.00</price>
-                <price date="2023-01-01">8.20</price>
-            </statistics>
+            <name>WWZ</name>
+            <offer date="2023-03-02">
+                <postalcode>6300</postalcode>
+                <price>12</price>
+            </offer>
+            <offer date="2023-03-02">
+                <postalcode>6400</postalcode>
+                <price>14</price>
+            </offer>
+            <offer date="2023-03-02">
+                <postalcode>6200</postalcode>
+                <price>2</price>
+            </offer>
+        </plant>
+        <plant>
+            <name>EWZ</name>
+            <offer date="2023-03-02">
+                <postalcode>8300</postalcode>
+                <price>12</price>
+            </offer>
+            <offer date="2023-03-02">
+                <postalcode>8400</postalcode>
+                <price>14</price>
+            </offer>
+            <offer date="2023-03-02">
+                <postalcode>8200</postalcode>
+                <price>2</price>
+            </offer>
         </plant>
     </energie-plant>
 </energie-data>
