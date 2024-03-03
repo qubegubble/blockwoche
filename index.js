@@ -26,32 +26,34 @@ app.post('/convertToPdf', async (req, res) => {
     res.sendFile(path.resolve('temp.pdf'))
 })
 
-app.post('/updateData', (req, res) => {
-    const dataToUpdate = req.body
-    // read database xml
-    const databasePath = path.resolve('xml-content', 'database', 'database.xml');
-    const databaseXml = fs.readFileSync(databasePath, 'utf-8')
-    const xmlDocDatabase = libxmljs.parseXml(databaseXml)
-    // select node to update
-    const plantStatistics = xmlDocDatabase.get(`//plant[name="${dataToUpdate.plant}"]/statistics`);
+app.post("/updateData", (req, res) => {
+  const dataToUpdate = req.body;
+  // read database xml
+  const databasePath = path.resolve("xml-content", "database", "database.xml");
+  const databaseXml = fs.readFileSync(databasePath, "utf-8");
+  const xmlDocDatabase = libxmljs.parseXml(databaseXml);
 
-    // create new node with attribute etc.
-    plantStatistics.node('price', dataToUpdate.price).attr('date', dataToUpdate.date)
+  // select node to update
+  let plant = xmlDocDatabase.get(`//plant[name="${dataToUpdate.plant}"]/.`);
 
-    console.log(xmlDocDatabase.toString())
+  console.log(plant.toString());
 
-    // validate new database against schema
-    const valid = validateDatabase(xmlDocDatabase)
-    if (!valid) {
-        res.status(400).send('Invalid XML')
-        return
-    }
+  let offer = plant.node("offer").attr("date", dataToUpdate.date);
+  offer.node("postalcode", dataToUpdate.zipCode);
+  offer.node("price", dataToUpdate.price);
 
-    // write new database.xml
-    fs.writeFileSync(databasePath, xmlDocDatabase.toString(), 'utf-8')
+  // validate new database against schema
+  const valid = validateDatabase(xmlDocDatabase);
+  if (!valid) {
+    res.status(400).send("Invalid XML");
+    return;
+  }
 
-    res.sendStatus(200)
-})
+  // write new database.xml
+  fs.writeFileSync(databasePath, xmlDocDatabase.toString(), "utf-8");
+
+  res.sendStatus(200);
+});
 
 function validateDatabase(xmlDocDatabase) {
     const databaseXsd = fs.readFileSync(path.resolve('xml-content', 'database', 'database.xsd'), 'utf-8')

@@ -41,10 +41,22 @@
                                 </select>
                             </div>
                             <div>
-                                <label for="offer-input">Post your offer!</label>
-                                <textarea name="offer" id="offer-input" rows="4" cols="50"
-                                    placeholder="&lt;offer date=&quot;2023-03-02&quot;&gt;&#10;&lt;postalcode&gt;6400&lt;/postalcode&gt;&#10;&lt;price&gt;14&lt;/price&gt;&#10;&lt;/offer&gt;">
-                                </textarea>
+                                <label for="date-input">new date</label>
+                                <input type="date" name="date" id="date-input"
+                                    placeholder="new date"
+                                />
+                            </div>
+                            <div>
+                                <label for="zipCode-input">zip Code</label>
+                                <input type="text" name="zipCode" id="zipCode-input"
+                                    placeholder="6300"
+                                />
+                            </div>
+                            <div>
+                                <label for="price-input">new price</label>
+                                <input type="text" name="price" id="price-input"
+                                    placeholder="new price"
+                                />
                             </div>
                             <button type="submit">Insert</button>
                         </form>
