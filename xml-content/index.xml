@@ -7,6 +7,11 @@
         <index>0</index>
     </item>
     <item>
+        <text>Feature 1: XML Data to PDF</text>
+        <link>feature-01.xml</link>
+        <index>1</index>
+    </item>
+    <item>
         <text>Feature 2: XML Comparison</text>
         <link>feature-02.xml</link>
         <index>2</index>

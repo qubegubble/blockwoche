@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../feature-02/feature-02.xml"?>
 <energie-data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="database.xsd">
     <energie-plant>
@@ -8,14 +7,17 @@
             <offer date="2023-03-02">
                 <postalcode>6300</postalcode>
                 <price>12</price>
+                <currency>CHF</currency>
             </offer>
             <offer date="2023-03-02">
                 <postalcode>6400</postalcode>
                 <price>14</price>
+                <currency>CHF</currency>
             </offer>
             <offer date="2023-03-02">
                 <postalcode>6200</postalcode>
                 <price>2</price>
+                <currency>CHF</currency>
             </offer>
         </plant>
         <plant>
@@ -23,14 +25,17 @@
             <offer date="2023-03-02">
                 <postalcode>8300</postalcode>
                 <price>12</price>
+                <currency>CHF</currency>
             </offer>
             <offer date="2023-03-02">
                 <postalcode>8400</postalcode>
                 <price>14</price>
+                <currency>CHF</currency>
             </offer>
             <offer date="2023-03-02">
                 <postalcode>8200</postalcode>
                 <price>2</price>
+                <currency>CHF</currency>
             </offer>
         </plant>
     </energie-plant>
