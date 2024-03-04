@@ -24,7 +24,17 @@
                                 select="document('../database/database.xml')/energie-data/energie-plant/plant"
                         >
                         </xsl:apply-templates>
+                        <!-- <xsl:for-each select="energie-data/energie-plant/plant">
+                            <li>
+                                <xsl:value-of select="name"/>
+                            </li>
+                        </xsl:for-each> -->
+                        <!-- <ul>
+                            <xsl:apply-templates select="energie-data/energie-plant/plant">
+                        </ul> -->
+                        <!-- <xsl:apply-templates select="energie-data/energie-plant/plant"> -->
 
+                        
                     </div>
                 </div>
             </body>
@@ -36,5 +46,12 @@
             <xsl:value-of select="price"/>
         </li>
     </xsl:template>
+    <!-- <xsl:apply-templates select="energie-data/energie-plant/plant">
+    <xsl:template match="plant">
+        <p>hello</p>
+        <li>
+            <xsl:value-of select="name"/>
+        </li>
+    </xsl:template> --> 
     
 </xsl:stylesheet>
