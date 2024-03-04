@@ -16,7 +16,7 @@
 
                 <!-- Title and nav  -->
 
-                <h1>Feature #04</h1>
+                <h1>Feature #03</h1>
                 <small>
                     <a href="index.xml">Home</a>
                 </small>

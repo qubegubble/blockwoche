@@ -58,6 +58,12 @@
                                     placeholder="new price"
                                 />
                             </div>
+                            <div>
+                                <label for="currency-input">currency</label>
+                                <input type="text" name="currency" id="currency-input"
+                                    placeholder="CHF"
+                                />
+                            </div>
                             <button type="submit">Insert</button>
                         </form>
 

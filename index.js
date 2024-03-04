@@ -41,6 +41,7 @@ app.post("/updateData", (req, res) => {
   let offer = plant.node("offer").attr("date", dataToUpdate.date);
   offer.node("postalcode", dataToUpdate.zipCode);
   offer.node("price", dataToUpdate.price);
+  offer.node("currency", dataToUpdate.currency);
 
   // validate new database against schema
   const valid = validateDatabase(xmlDocDatabase);
