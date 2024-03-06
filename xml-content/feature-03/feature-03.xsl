@@ -15,7 +15,6 @@
             </head>
             <body>
 
-                <!-- Title and nav  -->
 
                 <h1>Feature #04</h1>
                 <small>

@@ -7,20 +7,18 @@
     <groupId>org.example</groupId>
     <artifactId>xslfo</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
-    <!-- Add your dependencies here -->
     <dependencies>
-        <!-- Apache FOP dependency -->
         <dependency>
             <groupId>org.apache.xmlgraphics</groupId>
             <artifactId>fop</artifactId>
-            <version>2.7</version> <!-- Check for the latest version -->
+            <version>2.7</version>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>

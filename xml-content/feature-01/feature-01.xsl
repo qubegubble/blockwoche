@@ -29,13 +29,13 @@
                             <a href="fo.xml" target="_blank">create FO</a>
                         </p>
                         <p>
-                            <a href="#" onclick="createPdf()">create PDF</a>
+                            <a href="#" onclick="createPdf(event)">Create PDF</a>
                         </p>
                         <a id="dummyLink"></a>
                     </div>
 
                 </div>
-                <script src="feature-03/fo-functions.js" type="text/javascript"></script>
+                <script src="feature-01/createPdf.js" type="text/javascript"></script>
             </body>
         </html>
     </xsl:template>
